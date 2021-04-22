@@ -12,6 +12,7 @@ type user5 struct {
 	Sayings []string
 }
 
+// By defines a sorting method
 type By func(u1, u2 *user5) bool
 
 type userSorter struct {
@@ -19,6 +20,7 @@ type userSorter struct {
 	by    func(u1, u2 *user5) bool
 }
 
+// Sort defines an user sorter
 func (by By) Sort(users []user5) {
 	us := &userSorter{
 		users: users,

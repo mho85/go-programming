@@ -30,7 +30,7 @@ func sqrt(f float64) (float64, error) {
 		return 0, sqrtError{
 			lat:  "50.2289 N",
 			long: "99.4656 W",
-			err:  fmt.Errorf("Error: %v\n", e),
+			err:  fmt.Errorf("error: %v", e),
 		}
 	}
 	return 42, nil
